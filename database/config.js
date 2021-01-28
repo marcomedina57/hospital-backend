@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 
+// uSmcSOh4Rt7q5wlu
+
+// juanes
 
 const dbConnection = async() => {
   
     try {
-    await mongoose.connect(DB_CNN, {
+    await mongoose.connect(process.env.DB_CNN, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true
@@ -13,7 +16,7 @@ const dbConnection = async() => {
 }
 catch(error) {
     console.log(error);
-    throw new Error('Erro al a hora dei niciar BD');
+    throw new Error('Erro2 al a hora dei niciar BD');
 }
 
 }
