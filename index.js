@@ -24,6 +24,10 @@ const { dbConnection} = require('./database/config');
 
 dbConnection();
 
+//Directorio publico
+
+app.use(express.static('public'))
+
 // ThdIfsMPof8g5xi8
 
 // marks
