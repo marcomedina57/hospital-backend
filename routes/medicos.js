@@ -23,7 +23,9 @@ getMedicos
 
 router.put('/:id', 
 [
-
+validarJWT,
+check('nombre', 'El nombre del medico es obligatorio').not().isEmpty(),
+validarCampos
 ],
 actualizarMedico
 );
