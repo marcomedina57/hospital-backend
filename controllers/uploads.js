@@ -9,7 +9,7 @@ const {actualizarImagen} = require('../helpers/actualizar-imagen');
 
 const fileUpload = (req, res = response) => {
 
-
+    console.log('si');
     const tipo = req.params.tipo;
     const id = req.params.id;
 
