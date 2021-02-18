@@ -78,11 +78,11 @@ const crearUsuario = async (req, res) => {
 const actualizarUsuario = async(req, res = response) => {
 
     const uid = req.params.id;
-    
+    console.log(uid);
     try {
         
         //TODO validar token y comprobar si es el usuario correcto
-        const usuarioDB = await this.Usuario.findById(uid);
+        const usuarioDB = await Usuario.findById(uid);
         if (!usuarioDB)
         {
             return res.status(404).json({
