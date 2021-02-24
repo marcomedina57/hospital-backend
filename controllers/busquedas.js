@@ -10,16 +10,16 @@ const getTodo = async(req, res, response) => {
     const busqueda = req.params.busqueda;
     const regex = new RegExp(busqueda, 'i');
     
-    const [usuarios,hospitales, medicos] = Promise.all([
-        await Usuario.find({
+    const [usuarios,hospitales, medicos] = await Promise.all([
+         Usuario.find({
             nombre: regex
         }),
     
-        await Hospital.find({
+         Hospital.find({
             nombre: regex
         }),
     
-        await Medico.find({
+         Medico.find({
             nombre: regex
         })
 
